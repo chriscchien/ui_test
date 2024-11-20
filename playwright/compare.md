@@ -17,6 +17,15 @@
 - Use `find_element(By.*)` in Selenium 4
 
 **Playwright**
-- `page.locator(selector)`  more declarative
-- `page.locator("#allow-collecting-longhorn-usage-metrics")` by ID
-- `page.locator("//form/div[1]")` by xpath
+- `page.locator(selector)`, which is more declarative
+- `page.locator("#allow-collecting-longhorn-usage-metrics")`- by ID
+- `page.locator("//form/div[1]")` - by xpath
+
+## Waiting strategy
+**Selenium**
+ - implicitly_wait : Only wait for element find, not guarantee element is ready(clickable, visible)
+ - Extra code for check element ready
+
+**Playwright**
+- Auto wait(default 30s) : wait until element is ready
+ 
